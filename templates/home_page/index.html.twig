@@ -1,9 +1,60 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{page_name}}{% endblock %}
+{% block title %}
+    {{page_name}}
+{% endblock %}
+
+{% block stylesheets %}
+    {# CSS #}
+    <link href="{{ asset('CSS/menu/menu.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('JS/menu/menu.js') }}"></script>
+{% endblock %}
+
 
 {% block body %}
-Hello World!
-<i class="fab fa-accessible-icon"></i>
+
+
+    <header>
+        <div class="headerRec">
+            <p>
+                <b>Wirtualny trener 3.0</b>
+            </p>
+        </div>
+
+        <div class="headerRec displayRec">
+            <p>
+                <i class="fas fa-leaf fa-lg	" style="color:#FF8A47"></i>
+            </p>
+        </div>
+
+        <div class="headerRec displayRec">
+            <p>
+                <i class="fas fa-lg fa-globe-europe"></i>
+                najwer23.github.io</p>
+        </div>
+    </header>
+
+    <nav class="menu" id="style-4">
+		<h2>MENU</h2>
+        <p><a href="/">Home</a></p>
+        <p><a href="#jkak">About</a></p>
+        <p><a href="#ss">Contact</a></p>
+        <p><a href="#fssf">Sign in</a></p>
+    </nav>
+
+    <div class="menu__toggler">
+        <span></span>
+    </div>
+
+	{# <section class="page_home_main_pic"> 
+<img alt="Smiley face" height="auto" src="IMG/pushup.svg" width="300px"> #}
+
+
+	</section>
+
+
 
 {% endblock %}
