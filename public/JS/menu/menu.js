@@ -13,7 +13,5 @@ window.onload = function () {
             menu.classList.toggle('active');
         })
     }
-
-    console.log("df");
 }
 
