@@ -13,7 +13,7 @@ class HomePageController extends AbstractController
     public function index()
     {
         return $this->render('home_page/index.html.twig', [
-            'page_name' => 'Home Page',
+            'page_name' => 'Virtual Coach',
         ]);
     }
 }
