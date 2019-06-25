@@ -99,12 +99,24 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+    .login{
+        min-height: 600px;
+    }
     .loginForm{   
         border-radius: 5px;
         border: solid 1px;
-        padding: 50px;
+        padding: 20px;
         width: 300px;
-        height: 300px;
+        height: 370px;
+    }
+
+    .iconWithInput .icon-ph2 {
+        margin-left:230px;
+    }   
+
+    .loginAlert{
+        width: 300px;
     }
 }
 
