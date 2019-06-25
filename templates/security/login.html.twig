@@ -1,36 +1,97 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('CSS/login/login.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block javascripts %}
+    <script crossorigin="anonymous" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+{% endblock %}
+
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+    <section class="login">
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
+        <div class="loginForm">
+            <h2>
+                Login In
+            </h2>
+
+            <form method="post">
+
+                <div class="iconWithInput">
+                    <div class="icon-ph1">
+                        <i class="fas fa-at"></i>
+                    </div>
+                    <input type="text" name="email" value="{{ last_username }}" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
+                </div>
+
+                <div class="iconWithInput">
+                    <div class="icon-ph1">
+                        <i class="fas fa-key"></i>
+                    </div>
+
+                    <div class="icon-ph2" id="iconPass">
+                        <i class="far fa-eye" onclick="showPass()"></i>
+                    </div>
+
+                    <input id="password-field" name="password" onblur="this.placeholder='Password'" onfocus="this.placeholder=''" placeholder="Password" type="password">
+                </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                <p>
+                    <a class="loginLink" href="#">Forgot password</a>
+                </p>
+
+                <button class="loginButton" type="submit">Log In</button>
+
+                <p style="text-align: center; margin-top: 30px">
+                    Dont't have an account?
+                    <a class="loginLink" href="#">
+                        <b>Sign UP</b>
+                    </a>
+                </p>
+
+
+            </form>
+
         </div>
-    #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+        {% if error %}
+            <div class="loginAlert">
+                <i class="fas fa-exclamation-circle"></i>
+                {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+
+        {% endif %}
+
+
+    </section>
+
+    <script>
+        $('form').submit(function () {
+            $(this).find("button[type='submit']").prop('disabled', true);
+        });
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        function showPass() {
+            var x = document.getElementById("password-field");
+
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("iconPass").innerHTML = '<i class="far fa-eye-slash" onclick="showPass()"></i>';
+
+            } else {
+                x.type = "password";
+                document.getElementById("iconPass").innerHTML = '<i class="far fa-eye" onclick="showPass()"></i>';
+            }
+        }
+    </script>
 {% endblock %}

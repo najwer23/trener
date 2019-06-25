@@ -1,8 +1,7 @@
 .pageHomeMainPic{
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: 74px;
-    height: 100vh;
+    height: calc(100vh);
     display: flex;
     justify-content: center;
     align-items: center;

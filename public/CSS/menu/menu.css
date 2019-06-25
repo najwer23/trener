@@ -9,6 +9,7 @@ header{
   line-height: 74px;
 }
 
+
 .headerRec{
   text-align: center;
   width: 200px;
@@ -90,15 +91,17 @@ header{
 
 .menu {
   position: fixed;
+  top: -74px;
   left: -500px;
   color: white;
   background:#8FBCE6;
   width: 500px;
-  height: 100%;
-  padding-top: 115px;
+  height: calc(100% + 74px);
+  padding-top: 190px;
   padding-left: 100px;
   transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
   overflow-y: auto;
+  z-index: 99;
 }
 
 .menu a{
