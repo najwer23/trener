@@ -6,73 +6,18 @@
 
 {% block stylesheets %}
     {# CSS #}
-    <link href="{{ asset('CSS/menu/menu.css') }}" rel="stylesheet"/>
     <link href="{{ asset('CSS/mainPage/mainPage.css') }}" rel="stylesheet"/>
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('JS/menu/menu.js') }}"></script>
 {% endblock %}
 
 
 {% block body %}
 
-
-    <header>
-        <div class="headerRec">
-            <h3>
-                <b>Virtual
-                    <i class="fas fa-couch fa-lg"></i>
-                </b>
-
-            </h3>
-        </div>
-
-        {# <div class="headerRec displayRec">
-            <p>
-                <i class="fas fa-leaf fa-lg	" style="color:#BF0E08"></i>
-            </p>
-        </div> #}
-
-        <div class="headerRec displayRec">
-            <p>
-                <i class="fas fa-lg fa-globe-europe"></i>
-                najwer23.github.io</p>
-        </div>
-    </header>
-
-    <nav class="menu" id="style-4">
-        <h2>MENU</h2>
-        <p>
-            <a href="/">
-                <i class="fas fa-umbrella-beach"></i>
-                Home</a>
-        </p>
-        <p>
-            <a href="#jkak">
-                <i class="fas fa-project-diagram"></i>
-                About</a>
-        </p>
-        <p>
-            <a href="#ss">
-                <i class="fas fa-at"></i>
-                Contact</a>
-        </p>
-        <p>
-            <a href="#fssf">
-                <i class="fas fa-door-open"></i>
-                Sign in</a>
-        </p>
-    </nav>
-
-    <div class="menu__toggler">
-        <span></span>
-    </div>
-
     <section class="pageHomeMainPic">
         <img alt="Push Up Img" height="auto" src="IMG/pushup.svg" width="500px">
         <p>Popraw swoją kondycję już dzisiaj!</p>
     </section>
-
 
 {% endblock %}

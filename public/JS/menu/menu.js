@@ -1,5 +1,5 @@
 window.onload = function () {
-    const toggler = document.querySelector('.menu__toggler');
+    const toggler = document.querySelector('.menuToggler');
     const menu = document.querySelector('.menu');
 
     /*
