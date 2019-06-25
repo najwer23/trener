@@ -5,6 +5,12 @@
     align-items: center;
     flex-direction: column; 
     background-image: url("../../IMG/login.png");
+    -webkit-animation: slide 30s linear infinite;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
 }
 
 .loginForm{   
