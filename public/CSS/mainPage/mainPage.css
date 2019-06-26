@@ -16,6 +16,29 @@
     text-align: center;
 }
 
+.mainPageButton{
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 50px;
+    width: 150px;
+    text-align: center;
+    height: 50px;
+    background: #BF0E08;
+    animation: colorchange 50s;
+    -webkit-animation: colorchange 50s linear infinite;
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: #BF0E08;}
+      25%  {background: orange;}
+      50%  {background: #1070CA;}
+      75%  {background: green;}
+      100% {background: #BF0E08;}
+    }
+
 
 @media only screen and (max-width: 500px) {
     .pageHomeMainPic p{
@@ -24,5 +47,9 @@
 
     .pageHomeMainPic img{
         width: 300px;
+    }
+
+    .mainPageButton{
+        margin-bottom: 50px;
     }
 }
