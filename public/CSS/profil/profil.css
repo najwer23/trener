@@ -1,0 +1,101 @@
+.profil{
+    padding-top: 125px;
+    width:90%;
+    margin-left:5%;
+}
+
+
+.profilParent{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profilChild{
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    margin-right: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.shadow {
+  box-shadow: 5px 5px 5px #666;
+  -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666;
+
+}
+
+.cranch{
+    background: #FFD747;
+}
+
+.pullUp{
+    background: #26BFBF;
+}
+
+.pushUp{
+    background: #FF8A47;
+}
+
+.squat{
+    background: #FC6170;
+}
+
+.profilChild h2{
+    margin-bottom: 10px;
+}
+
+.profilChild h3{
+    margin-bottom: 3px;
+}
+
+.profilChild p{
+    color: black;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkHistory{
+    background: #084B8A;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.linkHistory:hover{
+    background: rgb(46, 80, 112);
+}
+
+.linkTrain{
+    background: #00783E;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.linkTrain:hover{
+    background: rgb(1, 100, 52);
+
+}
+
+@media only screen and (max-width: 600px) {
+    .profil{
+        padding-top: 125px;
+    }
+
+    .profilChild{
+        margin-right: 0;
+    }
+}
