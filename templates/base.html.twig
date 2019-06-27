@@ -41,6 +41,7 @@
 
         <nav class="menu" id="scrollMenu">
             <h2>MENU</h2>
+
             <p>
                 {% if is_granted('ROLE_USER') %}
                     <a href="/profil">
@@ -124,9 +125,9 @@
 
         </nav>
 
-        <div class="menuToggler">
+        <button tabindex=2 aria-label="menu" class="menuToggler" type="button">
             <span></span>
-        </div>
+        </button>
 
 
         {% block body %}{% endblock %}
